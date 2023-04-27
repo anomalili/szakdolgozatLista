@@ -40,6 +40,7 @@
 }
 
 #tabla tr:nth-child(even){background-color: #f2f2f2;}
+#tabla tr:nth-child(odd){background-color: #ffffff;}
 
 #tabla tr:hover {background-color: #ddd;}
 
