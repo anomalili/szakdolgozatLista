@@ -9,28 +9,43 @@ class UjSzakdogaView {
 
         <input type="hidden" name="_token" value="${document.querySelector('meta[name="csrf-token"]').getAttribute('content')}">
 
-        <div class="form-group">
-        <label>Szakdolgozat címe</label>
-        <br>
-        <input type="text" name="szakdoga_nev">
+        <div class="mb-3 mt-3">
+        <div class="szoveg">
+        <label class="form-label">Szakdolgozat címe</label>
         </div>
-        <div class="form-group">
-        <label>Készítők neve</label>
-        <br>
-        <input type="text" name="githublink">
+        <div class="input">
+        <input type="text" name="szakdoga_nev" placeholder="cím" class="form-control">
         </div>
-        <div class="form-group">
-        <label>Oldal elérhetősége</label>
-        <br>
-        <input type="text" name="oldallink">
         </div>
-        <div class="form-group">
-        <label>Github elérhetőség</label>
         <br>
-        <input type="text" name="tagokneve">
+        <div class="mb-3 mt-3">
+        <div class="szoveg">
+        <label class="form-label">Készítők neve</label>
+        </div>
+        <div class="input">
+        <input type="text" name="githublink" placeholder="github" class="form-control">
+        </div>
+        </div>
+        <br>
+        <div class="mb-3 mt-3">
+        <div class="szoveg">
+        <label class="form-label">Oldal elérhetősége</label>
+        </div>
+        <div class="input">
+        <input type="text" name="oldallink" placeholder="oldal" class="form-control">
+        </div>
+        </div>
+        <br>
+        <div class="mb-3 mt-3">
+        <div class="szoveg">
+        <label class="form-label">Tagok</label>
+        </div>
+        <div class="input">
+        <input type="text" name="tagokneve" placeholder="tagok" class="form-control">
+        </div>
         </div>
 
-              <input type="submit" name="send" value="Új" class="btn btn-dark btn-block">
+              <input type="submit" name="send" value="Új" class="btn btn-danger">
             </div>
         </form>           
     `);

@@ -11,19 +11,33 @@ class AdminController {
             $("#szakdolgozatok").html("");
             $("#ujSzakdolgozat").html("");
             let vegpont = "szakdogak";
-            aszinkron.adatBe(vegpont, this.megjelenitSzakdogak);          
-            aszinkron.adatBe(vegpont, this.megjelenitUjSzakdoga);       
+            aszinkron.adatBe(vegpont, this.megjelenitSzakdogak);
+            aszinkron.adatBe(vegpont, this.megjelenitUjSzakdoga);
+        });
+        $("#userGomb").on("click", () => {
+            $("#szakdolgozatok").html("");
+            $("#ujSzakdolgozat").html("");
+            let vegpont = "szakdogak";
+            aszinkron.adatBe(vegpont, this.megjelenitSzakdogak);
         });
     }
 
 
     megjelenitSzakdogak(adat) {
-        new SzakdogakView(adat, $("#szakdolgozatok"));
+
+        if (adat.length > 0) {
+            new SzakdogakView(adat, $("#szakdolgozatok"));
+        } else {
+            $("#szakdolgozatok").html("<p>Nincs megjeleníthető szakdolgozat</p>");
+        }
     }
+
+
     megjelenitUjSzakdoga(adat) {
         new UjSzakdogaView(adat, $("#ujSzakdolgozat"));
     }
 }
+
 
 
 export default AdminController;

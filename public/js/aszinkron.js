@@ -42,7 +42,7 @@ class Aszinkron {
     adatModosit(vegpont, adat) {
         console.log(adat);
         console.log("MÓDOSÍT" + vegpont);
-//        vegpont += "/" + adat.id;
+ //       vegpont += "/" + adat.id;
         fetch(vegpont, {
             method: "PUT",
             headers: {

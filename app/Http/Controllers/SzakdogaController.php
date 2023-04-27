@@ -21,7 +21,8 @@ class SzakdogaController extends Controller
         $store->oldallink = $request->oldallink;
         $store->tagokneve = $request->tagokneve;
         $store->save();
-        return response()->json(['success' => 'Tárolva!']);
+        return redirect('/')->with('success', 'Szakdolgozat sikeresen módosítva');
+
     }
     public function update(Request $request, $id){
         $update = Szakdoga::find($id);
@@ -31,7 +32,7 @@ class SzakdogaController extends Controller
         $update->tagokneve = $request->tagokneve;
         $update->save();
 
-        return response()->json(['success' => 'Módosítva!']);
+        return redirect('/')->with('success', 'Szakdolgozat sikeresen módosítva');
 
     }
     public function destroy($id){

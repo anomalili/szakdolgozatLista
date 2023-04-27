@@ -21,5 +21,6 @@ Route::get('/', function () {
 
 Route::get('/szakdogak', [SzakdogaController::class, 'index']);
 Route::post('/szakdogak', [SzakdogaController::class, 'store']);
-Route::put('/szakdogak/{id}', [SzakdogaController::class, 'update'])->name('frissit');
+//Route::put('/szakdogak/{id}', [SzakdogaController::class, 'update'])->name('frissit');
+Route::put('/szakdogak/{id}', [SzakdogaController::class, 'update'])->name('szakdoga.update');
 Route::delete('/szakdogak/{id}', [SzakdogaController::class, 'destroy']);
